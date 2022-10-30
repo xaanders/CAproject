@@ -1,0 +1,26 @@
+@use 'sass:math';
+
+@import 'style.scss';
+
+
+.title {
+    
+    text-align: center;
+    &_label {
+        font-size: rem(20);
+        line-height: lh(28, 20);
+        color: #FF2D59;
+        font-weight: 600;
+        padding-bottom: rem(10);
+    }
+    &:not(:last-child) {
+        margin-bottom: rem(20);
+    }
+
+    &_value {
+        font-size: rem(42);
+        line-height: lh(56, 42);
+        color: #111029;
+        font-weight: 600;
+    }
+}

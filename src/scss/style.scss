@@ -1,0 +1,43 @@
+@use 'sass:math';
+// fonts
+@import url("https://fonts.googleapis.com/css?family=Poppins:regular,500,600&display=swap");
+
+$fontFamily: 'Poppins';
+$root-font-size: 16;
+// // colors
+$mainColor: #4C40F7;
+$greyColor: #6B6B6B;
+$titleColor: #111029;
+$white: #ffffff;
+$companyColor: #ABAFC7;
+
+
+// // sizes
+$minWidth: 428px;
+$maxWidth: 1440px;
+
+$containerPadding: 160px;
+
+$maxWidthContainer: 1120px;
+
+// // first breakpoint
+
+$containerWidth: $maxWidthContainer + $containerPadding * 2; 
+
+// // breakpoints
+
+$pc: $containerWidth;
+$tablet: 900px;
+$mobile: 530px;
+
+$tabletWidth: $tablet - 60px;
+
+
+@function rem($size) {
+  @return calc($size / $root-font-size * 1rem);
+}
+
+@function lineh($lh-px, $fs-px) {
+  @return calc($lh-px / $fs-px);
+}
+

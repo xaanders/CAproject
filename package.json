@@ -1,0 +1,22 @@
+{
+  "name": "caproject",
+  "version": "1.0.0",
+  "description": "challenge project to exercise scss",
+  "main": "./src/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xaanders/CAproject.git"
+  },
+  "author": "Oleksandr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xaanders/CAproject/issues"
+  },
+  "homepage": "https://github.com/xaanders/CAproject#readme",
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+}
