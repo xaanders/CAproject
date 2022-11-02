@@ -1,6 +1,8 @@
 @import 'style.scss';
 @import 'common.scss';
 @import 'header.scss';
+@import 'intro.scss';
+@import 'cards.scss';
 
 // refreshing
 
@@ -28,7 +30,7 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size: inherit;font-family: inherit;}
 
 body { 
-  color: $greyColor;
+  color: $white;
   font-family: 'Poppins';
   
   &.of-hidden {
@@ -36,27 +38,66 @@ body {
   }
 }
 
+.button {
+
+  background-color: $mainColor;
+  border-radius: 10px;
+  color: $white;
+  font-weight: 600;
+  font-size: 1rem;
+  filter: drop-shadow(-15px 10px 30px rgba(76, 64, 247, 0.2));
+  transition: background-color 0.3s ease;
+    &:hover {
+      background-color: $yellow;
+      color: $mainColor;
+    }
+}
+
+.arrow {
+  transform: translate(7px, 3px);
+}
 
 .container {
-  max-width: 1120px;
-  min-height: 100vh;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   overflow: hidden;
+  background: $bgColor no-repeat;
 }
 
 
+[class*="__container"] {
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+}
 
-@media screen and (max-width: $tablet) {
-  .container {
+.page {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 200px;
+}
+
+@media screen and (max-width: $pc) {
+
+  [class*="__container"] {
     max-width: $tablet;
-    padding: 0 20px;
+
   }
 }
 
-@media screen and (max-width: $mobile) {
-  .container {
-    max-width: $mobile;
-  }
-}
+// @media screen and (max-width: $tablet) {
+//   .container {
+//     max-width: $tablet;
+//   }
+// }
+
+// @media screen and (max-width: $mobile) {
+//   .container {
+//     max-width: $mobile;
+
+//   }
+// }
 

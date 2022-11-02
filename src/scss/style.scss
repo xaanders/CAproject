@@ -10,23 +10,21 @@ $greyColor: #6B6B6B;
 $titleColor: #111029;
 $white: #ffffff;
 $companyColor: #ABAFC7;
-
-
+$bgColor: #00113B;
+$yellow: #FFCC00;
 // // sizes
 $minWidth: 428px;
 $maxWidth: 1440px;
 
-$containerPadding: 160px;
 
 $maxWidthContainer: 1120px;
 
 // // first breakpoint
 
-$containerWidth: $maxWidthContainer + $containerPadding * 2; 
 
 // // breakpoints
 
-$pc: $containerWidth;
+$pc: $maxWidthContainer;
 $tablet: 900px;
 $mobile: 530px;
 
@@ -41,3 +39,20 @@ $tabletWidth: $tablet - 60px;
   @return calc($lh-px / $fs-px);
 }
 
+@mixin cardsHover($card, $color) {
+  &.card#{$card} {
+    transition: all 0.3s ease;
+
+      &:hover {
+          background-color: #{$color};
+          
+          .services#{$card} {
+              background-color: $white;
+              a {
+                  color: #{$color};
+              }
+          }
+      }
+      
+  }
+}

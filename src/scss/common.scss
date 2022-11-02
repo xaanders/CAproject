@@ -4,23 +4,24 @@
 
 
 .title {
-    
     text-align: center;
+    margin-bottom: rem(60);
+
     &_label {
         font-size: rem(20);
         line-height: lh(28, 20);
-        color: #FF2D59;
+        color: $yellow;
         font-weight: 600;
         padding-bottom: rem(10);
     }
-    &:not(:last-child) {
-        margin-bottom: rem(20);
-    }
+    // &:not(:last-child) {
+    //     margin-bottom: rem(20);
+    // }
 
     &_value {
         font-size: rem(42);
         line-height: lh(56, 42);
-        color: #111029;
+        color: $white;
         font-weight: 600;
     }
 }
