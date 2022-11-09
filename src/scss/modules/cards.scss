@@ -1,13 +1,14 @@
-@import 'style.scss';
+@import '../style'; 
 
 .cards {
     
         display: flex;
-        flex-flow:wrap;
-        row-gap: 60px;
+        flex-flow: wrap;
+        row-gap: rem(60);
         column-count: 4;
-        column-gap: 32px;
+        column-gap: 2rem;
         justify-content: center;
+        // overflow: auto;
 
   
     &__item {
@@ -19,7 +20,7 @@
 
         display: flex;
         flex-direction: column;
-        padding: 44px 30px;
+        padding: rem(44) rem(30);
         row-gap: rem(44);
         transition: all 0.3s ease;
 
@@ -27,17 +28,12 @@
        
 
         @include cardsHover(-flame, $mainColor);
-        @include cardsHover(-pen, #FF2D59);
-        @include cardsHover(-pc, #4ADB61);
-        @include cardsHover(-phone, #FFCC00);
+        @include cardsHover(-pen, $red);
+        @include cardsHover(-pc, $green);
+        @include cardsHover(-phone, $yellow);
         @include cardsHover(-business, #007BFF);
-        @include cardsHover(-marketing, #FF6800);
+        @include cardsHover(-marketing, $orange);
 
-        
-
-
-        
-    
     }
     &__logo {
         height: 97px;
@@ -53,7 +49,7 @@
         
         .icon__services  {
             color: $white;
-            font-size: 33px;
+            font-size: rem(33);
             transition: all 0.3s ease;
 
         }
@@ -65,23 +61,28 @@
 
         &.services-pen {
             background-color: #FF2D59;
-            filter: drop-shadow(0px 15px 30px rgba(255, 45, 89, 0.4));
+            box-shadow: 0px 15px 30px rgba(255, 45, 89, 0.4);
+
         }
         &.services-pc {
             background-color: #4ADB61;
-            filter: drop-shadow(0px 15px 30px rgba(74, 219, 97, 0.4));
+            box-shadow: 0px 15px 30px rgba(74, 219, 97, 0.4);
+
         }
         &.services-phone {
             background-color: #FFCC00;
-            filter: drop-shadow(0px 15px 30px rgba(0, 123, 255, 0.4));
+            box-shadow: 0px 15px 30px rgba(255, 204, 0, 0.4);
+
         }
         &.services-business {
             background-color: #007BFF;
-            filter: drop-shadow(0px 15px 30px rgba(0, 123, 255, 0.4));
+            box-shadow: 0px 15px 30px rgba(0, 123, 255, 0.4);
+
         }
         &.services-marketing {
             background-color: #FF6800;
-            filter: drop-shadow(0px 15px 30px rgba(255, 104, 0, 0.4));
+            box-shadow: 0px 15px 30px rgba(255, 104, 0, 0.4);
+
         }
 
         
@@ -92,15 +93,15 @@
     &__name {
         font-weight: 600;
 
-        font-size: 20px;
-        line-height: 28px;
+        font-size: rem(20);
+        line-height: lineh(28, 20);
         margin-bottom: 1rem;
     }
 
     &__text {
         font-weight: 400;
-        font-size: 18px;
-        line-height: 32px;
+        font-size: rem(18);
+        line-height: lineh(32, 18);
         flex: 1 1 auto;
     }
     &__next {

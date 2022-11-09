@@ -1,0 +1,53 @@
+@import '../style'; 
+
+
+.interior {
+  
+    &__places {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+
+    }
+    &__column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        align-items: center;
+        flex: 0 1 33.3333%;
+        
+    }
+    &__item {
+        
+        img {
+            max-width: 100%;
+            display: block;
+
+        }
+    }
+}
+
+
+@media screen and (max-width: $tablet) {
+    .interior {
+        &__places {
+            gap: 20px;
+        }
+        &__column {
+            gap: 20px;
+        }
+
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .interior {
+        &__places {
+            gap: 15px;
+        }
+        &__column {
+            gap: 15px;
+        }
+    }
+}

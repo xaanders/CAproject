@@ -12,6 +12,23 @@ $white: #ffffff;
 $companyColor: #ABAFC7;
 $bgColor: #00113B;
 $yellow: #FFCC00;
+$red: #FF2D59;
+$green: #4ADB61;
+$orange: #FF6800;
+
+.red {
+  color: $red;
+}
+
+.green {
+  color: $green;
+}
+
+.orange {
+  color: $orange;
+}
+
+
 // // sizes
 $minWidth: 428px;
 $maxWidth: 1440px;
@@ -41,7 +58,6 @@ $tabletWidth: $tablet - 60px;
 
 @mixin cardsHover($card, $color) {
   &.card#{$card} {
-    transition: all 0.3s ease;
 
       &:hover {
           background-color: #{$color};
@@ -56,3 +72,4 @@ $tabletWidth: $tablet - 60px;
       
   }
 }
+

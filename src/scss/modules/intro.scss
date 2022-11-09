@@ -1,12 +1,12 @@
-@import 'style.scss';
-
+@import '../style'; 
 
 .intro {
-    margin-top: rem(184);
+    margin-top: rem(84);
 
     &__container {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     // flex blocks
@@ -49,7 +49,6 @@
     }
     
     &__picture {
-        // flex: 0 1 50%;
 
         .ink {
             position: relative;
@@ -79,8 +78,10 @@
     @media screen and (max-width: $tablet) {
 
         &__container {  
+            flex-direction: column;
+            justify-content: center;
             position: relative;
-            gap: 5px;
+            gap: 30px;
         }
     
         &__info {
@@ -95,25 +96,19 @@
         
     }
 
-        @media screen and (max-width: 780px) {
-            .info__btn {
-                position: absolute;
-                bottom: 0;
-                right: 15px;
+        // @media screen and (max-width: 780px) {
+        //     .info__btn {
+        //         position: absolute;
+        //         bottom: 0;
+        //         right: 15px;
 
-            }
-        }
+        //     }
+        // }
 
 
     @media screen and (max-width: $mobile) {
 
-        // margin-top: rem(100);
-
-        &__container {
-            flex-direction: column;
-            justify-content: center;
-            // text-align: center;
-        }
+    
         &__info {
             order: 1;
             justify-content: center;

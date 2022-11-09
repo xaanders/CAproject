@@ -1,0 +1,120 @@
+@import '../style'; 
+
+
+.questions {
+    padding: 200px  15px !important;
+
+
+    &__container {
+        position: relative;
+        text-align: center;
+        &::before {
+            content: url('../../../assets/images/background/bg-left-blue.png');
+            position: absolute;   
+            left: -13%;
+            bottom: -20%;
+            z-index: 1;
+            
+        }
+
+        &::after {
+            content: url('../../../assets/images/background/bg-right-yellow.png');
+            position: absolute;
+            right: -13%;
+            top: -84%;
+            z-index: 0;
+        }
+        
+
+    }
+
+
+
+    &__body {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+    }
+
+    .question__item {
+        padding: 2rem;
+        border: 1px solid #D8D8D8;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        text-align: left;
+        .question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: lineh(25, 16);
+            span {
+                font-size: 1.5rem;
+                transform: rotate(90deg)
+            }
+        }
+        .answer {
+            padding-top: 2rem;
+            border-top: 1px solid #D8D8D8;
+            display: none;
+            font-weight: 400;
+            font-size: rem(18);
+            line-height: lineh(32,18);
+        }
+
+        &.active {
+            border: 2px solid $mainColor;
+            .question {
+                padding-bottom: 2rem;
+            }
+            .answer { 
+                display: block;
+            }
+
+            span {
+                transform: rotate(-90deg);
+            }
+
+
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        &__container {
+            
+            &::before {
+                left: -13%;
+                bottom: -30%;
+                z-index: 1;
+            }
+    
+            &::after {
+                right: -13%;
+                top: -74%;
+            }
+            
+    
+        }
+       
+    }
+
+    @media screen and (max-width: $mobile) {
+        &__container {
+    
+            &::after {
+                right: -30%;
+                top: -68%;
+            }
+            
+    
+        }
+    }
+      
+   
+    
+    
+}
