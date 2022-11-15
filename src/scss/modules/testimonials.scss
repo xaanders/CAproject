@@ -1,0 +1,67 @@
+@import '../style'; 
+
+.testimonials {
+    background-color: #020E2D;
+
+    &__cards {
+        display: flex;
+        justify-content: center; 
+        
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        row-gap: rem(120);
+        padding-top: rem(60);
+  
+        @media screen and (max-width: $tablet) {
+            row-gap: rem(80);
+
+            
+        }
+
+
+    }
+    &__card {
+        position: relative;
+        flex: 0 1 352px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+        padding: rem(90) 2rem rem(44) 2rem;
+        background: #00113B;
+        border-radius: 20px;
+
+        ._icon-star {
+            color: $yellow;
+        }
+    }
+
+    .picture {
+        position: absolute;
+        left: 32%;
+        top:-16%;
+    }
+
+    .person {
+
+        &__name {
+            font-weight: 600;
+            font-size: rem(24);
+            line-height: lineh(32, 24);
+        }
+        &__company {
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: lineh(24, 16);
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: rem(18);
+        line-height: lineh(32, 18);
+    }
+    
+    
+}

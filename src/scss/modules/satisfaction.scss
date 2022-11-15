@@ -87,28 +87,26 @@
             display: flex;
             flex-direction: column;
             gap: 1rem;
-            .info__item {
-                margin-top: 1rem;
-                display: flex;
-                gap: rem(24);
-
-                .orange {
-                    color: $orange;
-                }
-
-                .green {
-                    color: $green;
-                }
-
-                .red { 
-                    color: $red;
-                }
-            }
+            
         }
-        
-}
+        .info__item {
+            margin-top: 1rem;
+            display: flex;
+            gap: rem(24);
 
-    
+            .orange {
+                color: $orange;
+            }
+
+            .green {
+                color: $green;
+            }
+
+            .red { 
+                color: $red;
+            }
+        }    
+    }    
 }
 
 @media screen and (max-width: 1125px) {
@@ -128,47 +126,39 @@
 
 @media screen and (max-width: 1000px) {
     .satisfaction {
-    
-          
         &__body {
             flex-direction: column;
             text-align: center;
         }
         &__cards {
             order: 1;
-
         }
 
         &__info {
             order: 0;
 
             .info__list{
-                
                 gap: 0;
-                .info__item {
-                    display: flex;
+            }
+            .info__item {
+                display: flex;
 
-                    .orange {
-                        color: $orange;
-                    }
+                .orange {
+                    color: $orange;
+                }
 
-                    .green {
-                        color: $green;
-                    }
+                .green {
+                    color: $green;
+                }
 
-                    .red { 
-                        color: $red;
-                    }
+                .red { 
+                    color: $red;
                 }
             }
         }
       
     }
   }
-
-  @media screen and (max-width: 1000px) {
-   
-    }
 
 
 @media screen and (max-width: $tablet) {
@@ -193,7 +183,6 @@
             font-size: 2.5rem;
         }
         .info__body {
-            
             max-width: 650px;
         }
       }
@@ -210,11 +199,10 @@
 
     &__cards {
         flex-direction: column;
-        // align-items: center;
+
         .block-left, .block-right  {
             align-self: center;
         }
-
     
     }
 

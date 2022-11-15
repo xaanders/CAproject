@@ -1,0 +1,81 @@
+@import '../style'; 
+
+.connect {
+
+    &__forms {
+        display: flex;
+        flex-direction: column;
+        gap: 200px;
+        @media screen and (max-width: $tablet) {
+            gap: 100px;
+            
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        align-items: center;
+        
+        border-radius: 20px;
+        padding: rem(60) rem(100) rem(80);
+
+        &.newproject {
+            background-color: $yellow;
+        }
+        &.subscribe {
+            background-color: $mainColor;
+        }
+    }
+    &__label {
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: lineh(24,16);
+        margin-bottom: 1rem;
+    }
+
+    &__title{
+        font-weight: 600;
+        font-size: rem(42);
+        line-height: lineh(56, 42);
+    }
+ 
+    .newproject__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: rem(19) rem(42.5);
+        max-width: 200px;
+        box-shadow: 0px 20px 70px rgb(255, 59, 47);
+    }
+
+    .subscribe__form {
+        display: flex;
+        justify-content: space-between;
+        padding: rem(20) rem(28);
+        width: 100%;
+        border: 2px solid #4C40F7;
+        box-shadow: 0px 8px 50px #3123F8;
+        border-radius: 11px;
+        background-color: #00113B;
+        max-width: 500px;
+        
+        button {
+            background-color: inherit;
+        }
+
+        input {
+            background-color: inherit;
+            color: $white;
+        }
+       
+    }
+    ._icon-search {
+        color: $white;
+    }
+    
+}
+

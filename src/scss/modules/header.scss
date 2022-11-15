@@ -51,10 +51,6 @@
       line-height: lh(26, 16);
     } 
 
-  // @media screen and (max-width: $pc) {
-
-    
-  // }
   @media screen and (max-width: $tablet) {
   
   
@@ -175,12 +171,12 @@
       }
       &._active::before {
         transform: rotate(45deg);
-        top: 9px;
+        top: 11px;
       }
 
       &._active::after {
         transform: rotate(-45deg);
-        bottom: 9px;
+        bottom: 11px;
 
       }
     }

@@ -9,7 +9,6 @@
         align-items: center;
     }
 
-    // flex blocks
 
     &__info {
         display: flex;
@@ -95,15 +94,6 @@
         }
         
     }
-
-        // @media screen and (max-width: 780px) {
-        //     .info__btn {
-        //         position: absolute;
-        //         bottom: 0;
-        //         right: 15px;
-
-        //     }
-        // }
 
 
     @media screen and (max-width: $mobile) {

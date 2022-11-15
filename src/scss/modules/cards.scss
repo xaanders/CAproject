@@ -5,10 +5,8 @@
         display: flex;
         flex-flow: wrap;
         row-gap: rem(60);
-        column-count: 4;
         column-gap: 2rem;
         justify-content: center;
-        // overflow: auto;
 
   
     &__item {
