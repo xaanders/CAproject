@@ -39,8 +39,9 @@
 
     .picture {
         position: absolute;
-        left: 32%;
+        left: 50%;
         top:-16%;
+        transform: translate(-50%, 0);
     }
 
     .person {
@@ -63,5 +64,13 @@
         line-height: lineh(32, 18);
     }
     
+
+    
+    // @media screen and (max-width: $mobile) {
+    //     .picture {
+    //         left: 30%;
+    //     }
+        
+    // }
     
 }

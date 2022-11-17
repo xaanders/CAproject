@@ -15,14 +15,28 @@
         justify-content: center;
         gap: 30px;
         align-items: center;
-        flex: 0 1 33.3333%;
+        flex: 0 1 auto;
         
     }
     &__item {
-        
+        position: relative;
+        overflow: hidden;
+
+        .item__name {
+            font-size: rem(18);
+            line-height: lineh(32, 18);
+            position: absolute;
+            bottom: 0;
+            background-color: rgba($bgColor, 0.6);
+            padding: 0 0 10px 10px;
+            width: 100%;
+            border-radius: 0 0 10px 10px;
+        }
+
         img {
             max-width: 100%;
             display: block;
+            border-radius: 10px;
 
         }
     }
@@ -45,9 +59,23 @@
     .interior {
         &__places {
             gap: 15px;
+            flex-wrap: wrap;
         }
         &__column {
             gap: 15px;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+
+        &__item {
+          
+            .item__name {
+                font-size: rem(14);
+                line-height: lineh(28, 14);
+            }
+    
+        
         }
     }
 }

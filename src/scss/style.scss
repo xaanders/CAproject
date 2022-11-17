@@ -68,6 +68,13 @@ $tabletWidth: $tablet - 60px;
                   color: #{$color};
               }
           }
+
+          .cards__next {
+            background-color: $white;
+          }
+          .arrow__icon {
+            color: $color;
+          }
       }
       
   }

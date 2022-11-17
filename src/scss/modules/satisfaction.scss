@@ -4,7 +4,7 @@
 .satisfaction {
     background-color: #020E2D;
     &__container {
-        padding-top: 100px !important;
+        padding-top: rem(100) !important;
     }
     &__body {
         display: flex;
@@ -68,7 +68,7 @@
         flex-direction: column;
         align-items: flex-start;
         padding: 0px;
-        gap: 35px;
+        gap: rem(35);
         flex: 1 1 41%;
 
         .info__title {
@@ -193,6 +193,10 @@
 
 @media screen and (max-width: $mobile) {
   .satisfaction {
+    &__container {
+        padding-top: rem(50) !important;
+    }
+
     &__body {
         flex-direction: column;
     }

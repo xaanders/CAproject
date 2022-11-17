@@ -1,7 +1,7 @@
 @import '../style'; 
 
 .intro {
-    margin-top: rem(84);
+    margin-top: rem(104);
 
     &__container {
         display: flex;
@@ -43,9 +43,25 @@
             line-height: lineh(26, 16);
             padding: rem(19) rem(35);
             max-width: 200px;
-        }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            .arrow__icon {
+                font-size: 1.5rem;
+            }
 
+            &:hover {
+                .arrow__icon {
+                    color: $mainColor;
+                }
+            }
+            
+        
+        }
     }
+
+    
     
     &__picture {
 

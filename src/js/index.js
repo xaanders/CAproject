@@ -10,3 +10,16 @@ menuBtn.addEventListener('click', () => {
     
 })
 
+const questionParents = document.querySelectorAll('.question__item');
+const questions = document.querySelectorAll('.question__item .question');
+
+questions.forEach((item, i) => {
+    item.addEventListener('click', (e) => {
+        if(e.target === item) {
+            questionParents[i].classList.toggle('active');
+        }
+    });
+});
+        
+
+
