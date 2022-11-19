@@ -1022,14 +1022,14 @@
   text-align: center;
 }
 .questions__container::before {
-  content: url("../assets/images/background/bg-left-blue.png");
+  content: url("../images/background/bg-left-blue.png");
   position: absolute;
   left: -13%;
   bottom: -20%;
   z-index: 1;
 }
 .questions__container::after {
-  content: url("../assets/images/background/bg-right-yellow.png");
+  content: url("../images/background/bg-right-yellow.png");
   position: absolute;
   right: -13%;
   top: -84%;
