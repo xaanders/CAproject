@@ -23,3 +23,34 @@ questions.forEach((item, i) => {
         
 
 
+const next = document.querySelector('.opinions__next'),
+    prev = document.querySelector('.opinions__previous'),
+    dots = document.querySelectorAll('.opinions__dot'),
+    opinions = document.querySelectorAll('.opinion');
+
+let index = 1;
+
+changeOpinion();
+    
+function changeOpinion (n = 0) {
+    opinions.forEach(opinion => opinion.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+
+
+    index += n;
+
+
+    if(index > opinions.length) {
+        index = 1;
+    } 
+    else if(index < 1 ) {
+        index = opinions.length;
+    }
+    opinions[index - 1].classList.add('active');
+    dots[index - 1].classList.add('active');
+
+
+}
+
+next.addEventListener('click', (e) => changeOpinion(1));
+prev.addEventListener('click', (e) => changeOpinion(-1));

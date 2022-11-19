@@ -43,7 +43,7 @@
 
         <main class="page" >
 
-            <section id="intro" class="intro">
+            <section id="intro" class="intro line">
                 
                 <div class="intro__container">
 
@@ -71,7 +71,7 @@
                 
             </section>
 
-            <section id="content__cards" class="content__cards">
+            <section id="content__cards" class="content__cards line">
                 <div class="cards__container">
 
                     <div class="title cards__title">
@@ -268,7 +268,8 @@
 
                             <div class="info__list">
                                 <div class="info__item">
-                                    <p>Provide idea support from our creative team:</p>
+                                    <img src="./assets/images/icons/done.svg" alt="done">
+                                    <p>Provide idea support from our creative team</p>
                                 </div>
                                 <div class="info__item">
                                     <img src="./assets/images/icons/done.svg" alt="done">
@@ -292,7 +293,7 @@
                 </div>
             </section>
 
-            <section id="interior" class="interior">
+            <section id="interior" class="interior line">
                 <div class="interior__container">
                     
                     <div class="title">
@@ -398,18 +399,21 @@
 
             <section id="opinions" class="opinions">
                 <div class="opinions__container">
+
                     <div class="opinions__wrapper">
 
-                        <div class="opinions__previous">
-                            <a href="#" class="_icon-arrow arrow"></a>
+                        <div class="opinions__quotes">
+                            <img src="./assets/images/icons/quotes.svg" alt="">
+                        </div>
 
+                        <div class="opinions__previous">
+                            <a class="_icon-arrow arrow"></a>
                         </div>
                     
-                        <div class="opinion">
-                            <div class="opinion__quotes">
-                                <img src="./assets/images/icons/quotes.svg" alt="">
-                            </div>
 
+
+                        <div class="opinion">
+                        
                             <div class="opinion__text">
                                 <p>We are serious about providing our best service to all the customers we help. Customers satisfaction is our number one priority.</p>
                             </div>
@@ -418,21 +422,64 @@
                                 <h6 class="opinion__name">Mark Garfield</h6>
                                 <h6 class="opinion__position">CEO & Head of Product</h6>
                             </div>
-                            
-
-                            <ul class="opinion__dots">
-                                <li class="opinion__dot active"></li>
-                                <li class="opinion__dot"></li>
-                                <li class="opinion__dot"></li>
-                                <li class="opinion__dot"></li>
-                            </ul>
 
                         </div>
+
+                        
+                        <div class="opinion">
+                        
+                            <div class="opinion__text">
+                                <p>We responsible for all aspects of a business, including daily operations, administrative functions, and finances.</p>
+                            </div>
+
+                            <div class="opinion__signature">
+                                <h6 class="opinion__name">George Brown</h6>
+                                <h6 class="opinion__position">General Manager</h6>
+                            </div>
+
+                        </div>
+
+                        
+                        <div class="opinion">
+                        
+                            <div class="opinion__text">
+                                <p>Track market developments, create strategies, set up sales plans, and maintain customer relations.</p>
+                            </div>
+
+                            <div class="opinion__signature">
+                                <h6 class="opinion__name">John Gendalf</h6>
+                                <h6 class="opinion__position">Sales and Marketing Manager</h6>
+                            </div>
+
+                        </div>
+
+                        
+                        <div class="opinion">
+                        
+                            <div class="opinion__text">
+                                <p>We  help clarify their organization's point of view to its main audience through media releases and interviews.</p>
+                            </div>
+
+                            <div class="opinion__signature">
+                                <h6 class="opinion__name">Ronie Coulman</h6>
+                                <h6 class="opinion__position">Public Relations</h6>
+                            </div>
+
+                        </div>
+
+
                         <div class="opinions__next active">
-                            <a href="#" class="_icon-arrow arrow"></a>
-
-
+                            <a class="_icon-arrow arrow"></a>
                         </div>
+
+                        <ul class="opinions__dots">
+                            <li class="opinions__dot"></li>
+                            <li class="opinions__dot"></li>
+                            <li class="opinions__dot"></li>
+                            <li class="opinions__dot"></li>
+                        </ul>
+
+                       
                         
                     </div>
                     
@@ -450,11 +497,7 @@
                     <div class="questions__body">
 
                         <div class="question__item active">
-                            <div class="question">
-                                    <h6> What are the services provided to customers? </h6>
-                                    <span>></span>
-
-                            </div>
+                            <h6 class="question"> What are the services provided to customers? </h6>
 
                             <div class="answer">
                                 <p>Hello, we provide various services to help your business grow and develop. 
@@ -465,12 +508,19 @@
                         </div>
 
                         <div class="question__item">
-                            <div class="question">
-                                    <h6 >How can I submit a proposal for cooperation? </h6>
-                                    <span>></span>
-
+                            <h6 class="question">How can I submit a proposal for cooperation? </h6>
                                 
+                            <div class="answer">
+                                <p>Hello, we provide various services to help your business grow and develop. 
+                                    We help provide ideas, create designs, develop websites and mobile applications,
+                                     provide support for the growth of business ideas, 
+                                    to help customers market their products online through the marketplace.</p>
                             </div>
+                        </div>
+
+                        <div class="question__item">
+                            <h6 class="question">I come from a faraway place, can collaboration be done full time online through several meeting applications?</h6>
+                        
 
                             <div class="answer">
                                 <p>Hello, we provide various services to help your business grow and develop. 
@@ -481,13 +531,8 @@
                         </div>
 
                         <div class="question__item">
-                            <div class="question">
-                                <h6 >I come from a faraway place, can collaboration be done full time online through several meeting applications?</h6>
-                                <span>></span>
-
-
-                                
-                            </div>
+                            <h6 class="question">How do I get the payment complete? </h6>
+                
 
                             <div class="answer">
                                 <p>Hello, we provide various services to help your business grow and develop. 
@@ -498,25 +543,8 @@
                         </div>
 
                         <div class="question__item">
-                            <div class="question">
-                                <h6 >How do I get the payment complete? </h6>
-                                <span>></span>
-                            </div>
-
-                            <div class="answer">
-                                <p>Hello, we provide various services to help your business grow and develop. 
-                                    We help provide ideas, create designs, develop websites and mobile applications,
-                                     provide support for the growth of business ideas, 
-                                    to help customers market their products online through the marketplace.</p>
-                            </div>
-                        </div>
-
-                        <div class="question__item">
-                            <div class="question">
-                                <h6 >How long can the collaboration last? </h6>
-                                <span>></span>
-                            </div>
-
+                            <h6 class="question">How long can the collaboration last? </h6>
+                        
                             <div class="answer">
                                 <p>Hello, we provide various services to help your business grow and develop. 
                                     We help provide ideas, create designs, develop websites and mobile applications,
@@ -670,7 +698,7 @@
                 </div>
             </section>
 
-            <section id="connect" class="connect">
+            <section id="connect" class="connect line">
                 <div class="connect__container">
                     <div class="connect__forms">
 
@@ -706,7 +734,7 @@
                 </div>
             </section>
 
-            <section id="contact" class="contact">
+            <section id="contact" class="contact line">
                 <div class="contact__container">
                     <div class="contact__body">
 
@@ -807,6 +835,40 @@
                 }
             });
         });
+
+                
+        const next = document.querySelector('.opinions__next'),
+            prev = document.querySelector('.opinions__previous'),
+            dots = document.querySelectorAll('.opinions__dot'),
+            opinions = document.querySelectorAll('.opinion');
+
+        let index = 1;
+
+        changeOpinion();
+            
+        function changeOpinion (n = 0) {
+            opinions.forEach(opinion => opinion.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+
+            index += n;
+
+
+            if(index > opinions.length) {
+                index = 1;
+            } 
+            else if(index < 1 ) {
+                index = opinions.length;
+            }
+            opinions[index - 1].classList.add('active');
+            dots[index - 1].classList.add('active');
+
+
+        }
+
+        next.addEventListener('click', (e) => changeOpinion(1));
+        prev.addEventListener('click', (e) => changeOpinion(-1));
+
     </script>
 
     <!-- <script src="./src/js/index.js"></script> -->

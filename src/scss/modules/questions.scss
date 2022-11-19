@@ -43,8 +43,8 @@
         padding: 2rem;
         border: 1px solid #D8D8D8;
         border-radius: 8px;
-        transition: all 0.3s ease;
         text-align: left;
+
         .question {
             display: flex;
             justify-content: space-between;
@@ -54,11 +54,12 @@
             line-height: lineh(25, 16);
             cursor: pointer;
 
-        
-            span {
+            &::after {
+                content: '\0276F';
                 font-size: 1.5rem;
-                transform: rotate(90deg)
+                transform: rotate(90deg);
             }
+        
         }
         .answer {
             padding-top: 2rem;
@@ -67,6 +68,8 @@
             font-weight: 400;
             font-size: rem(18);
             line-height: lineh(32,18);
+            transition: all 0.5s ease;
+
         }
        
         
@@ -76,14 +79,16 @@
             .question {
 
                 padding-bottom: 2rem;
+
+                &::after {
+                    transform: rotate(-90deg);
+                }
+
             }
             .answer { 
                 display: block;
             }
 
-            span {
-                transform: rotate(-90deg);
-            }
 
 
         }

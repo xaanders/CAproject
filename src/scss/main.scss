@@ -93,6 +93,7 @@ section {
   position: relative;
   padding: rem(100) 0;
   overflow: hidden;
+
 }
 
 @media screen and (max-width: $pc) {
@@ -110,10 +111,10 @@ section {
   }
 }
 
-// @media screen and (max-width: $mobile) {
-//   .container {
-//     max-width: $mobile;
+@media screen and (max-width: $mobile) {
+  .container {
+    max-width: $mobile;
 
-//   }
-// }
+  }
+}
 

@@ -1,20 +1,30 @@
 @import '../style'; 
 .opinions {
+
     background-color: #020E2D;
 
     &__wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
+        flex-wrap: wrap;
+        text-align: center;
+        row-gap: 44px;
     }
+
+    // // // // // // // icons
+    &__quotes {
+        flex: 0 0 100%;
+        img {
+            transform: translate(-10%, 0);
+        }
+    }
+
     .opinions__previous {
         transform: rotate(180deg);
         
     }
-    // .opinions__next {
-    //     background-color: $mainColor;
-    // }
+    
     .opinions__next, .opinions__previous {
         min-width: 45px;
         height: 45px;
@@ -24,6 +34,7 @@
         align-items: center;
         background: #212C3A;
         cursor: pointer;
+        background-color: $mainColor;
 
         img {
             width: 12px;
@@ -34,11 +45,7 @@
             width: 100%;
         }
 
-        &.active {
-            background-color: $mainColor;
-
-        }
-
+ 
         &:hover {
             background-color: $yellow;
 
@@ -46,29 +53,28 @@
                 color: $mainColor;
             }
         }
-
         
     }
+
+
+    // // // // // // // // OPINION
     .opinion {
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: rem(44);
+        flex: 0 1 80%;
         text-align: center ;
         max-width: 723px;
-        gap: rem(44);
-
-        &__quotes { 
-            
-            img {
-                transform: translate(-10%, -10%)
-            }
-        }
+        transition: all 1s ease;
 
         &__text {
             font-weight: 400;
             font-size: 28px;
             line-height: 40px;
+            min-height: 130px;
+
         }
         &__signature {
             font-weight: 600;
@@ -77,42 +83,94 @@
             .opinion__name {
                 margin-bottom: 0.5rem;
             }
+
         }
 
-        &__dots {
+        &.active {
             display: flex;
-            gap: 9px;
-            justify-content: center;
-        }
-        &__dot {
-            width: 25px;
-            height: 6px;
-            background: $yellow;
-            border-radius: 2px;
-            cursor: pointer;
 
-            &.active {
-                background: $white;
-            }
-
-            &:hover {
-                background-color: $white;
-                
-            }
         }
 
-        @media screen and (max-width: $tablet) {
+       
+    }
+
+
+    &__dots {
+        display: flex;
+        gap: 9px;
+        justify-content: center;
+        flex: 0 0 100%;
+    }
+
+    &__dot {
+        width: 25px;
+        height: 6px;
+        background: $yellow;
+        border-radius: 2px;
+        cursor: pointer;
+
+        &.active {
+            background-color: $white;
+        }
+
+        &:hover {
+            background-color: $white;
+            
+        }
+    }
+
+
+    @media screen and (max-width: $tablet) {
+        &__wrapper {
+            row-gap: 22px;
+
+        }
+        .opinion {
 
             &__text {
                 font-weight: 400;
-                font-size: rem(30);
+                font-size: rem(23);
                 line-height: lineh(30, 23);
             }
             &__signature {
                 font-weight: 600;
                 font-size: 16px;
-                line-height: lineh(16, 20);
+                line-height: lineh(20, 16);
             }
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        
+    
+        &__quotes {
+            order: 0;
+            
+        }
+        .opinion {
+            flex: 0 1 100%;
+            order: 2;
+            &__text {
+                font-weight: 400;
+                font-size: rem(18);
+                line-height: lineh(26, 18);
+            }
+        }
+
+
+
+        &__next {
+            order: 4;
+
+        } 
+        
+        &__previous {
+            order: 3;
+
+        }
+
+        &__dots {
+            order: 1;
         }
     }
 

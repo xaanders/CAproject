@@ -128,7 +128,7 @@
     .satisfaction {
         &__body {
             flex-direction: column;
-            text-align: center;
+            // text-align: center;
         }
         &__cards {
             order: 1;
@@ -176,14 +176,17 @@
       }
 
       &__info {
-        text-align: center;
+        // text-align: center;
         align-items: center;
 
         .info__title {
             font-size: 2.5rem;
+                text-align: center;     
         }
         .info__body {
             max-width: 650px;
+            text-align: center;     
+
         }
       }
       
@@ -211,13 +214,12 @@
     }
 
     &__info {
-       
         .info__body {
             max-width: 400px;
+         
         }
       }
-      
-    
+   
   }
 }
 
