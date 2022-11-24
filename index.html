@@ -27,16 +27,16 @@
                                 <a href="#" class="menu-link">Home</a>
                             </li>
                             <li class="nav-menu-item">
-                                <a href="#" class="menu-link">Works</a>
+                                <a href="#content__cards" class="menu-link">Works</a>
                             </li>
                             <li class="nav-menu-item">
-                                <a href="#" class="menu-link">About</a>
+                                <a href="#satisfaction" class="menu-link">About</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
 
-                <a href="#" class="button contact-btn">Contact us</a>
+                <button type="button" class="button contact-btn modal-btn">Contact us</button>
                 
             </div>
         </header> 
@@ -473,10 +473,6 @@
                         </div>
 
                         <ul class="opinions__dots">
-                            <li class="opinions__dot"></li>
-                            <li class="opinions__dot"></li>
-                            <li class="opinions__dot"></li>
-                            <li class="opinions__dot"></li>
                         </ul>
 
                        
@@ -708,7 +704,7 @@
                                 <h3 class="connect__title">Start a New Project</h3>
                             </div>
                            
-                            <button type="button" class="button newproject__btn">Start Now <a class="_icon-arrow" ></a></button>
+                            <button type="button" class="button newproject__btn modal-btn">Start Now <a class="_icon-arrow" ></a></button>
                         
                         </div>
     
@@ -765,6 +761,22 @@
                 </div>
             </section>
 
+            <div class="modal">
+                <div class="modal__wrapper">
+                    <div data-close class="modal__close">&times;</div>
+                    <h4 class="modal__title">Type your contact information. <br>We'll call you back!</h4>
+                    <h4 class="modal__title"> </h4>
+
+                    <form class="modal__form" action="/post">
+                        <input id="name" type="text" name="fullName" placeholder="Your full name.">
+
+                        <input id="phone" type="text" name="phone" placeholder="Your phone number.">
+
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+
         </main>
 
         <footer class="footer">
@@ -813,7 +825,8 @@
     </div>
 
     <script> 
-            
+        
+        // MENU BURGER
         const menuBtn = document.querySelector('.menu-icon');
         const menu = document.querySelector('.nav-menu');
         const body = document.querySelector('body');
@@ -836,23 +849,31 @@
             });
         });
 
-                
+        // SLIDER
+
         const next = document.querySelector('.opinions__next'),
             prev = document.querySelector('.opinions__previous'),
-            dots = document.querySelectorAll('.opinions__dot'),
+            indicators = document.querySelector('.opinions__dots'),
             opinions = document.querySelectorAll('.opinion');
 
         let index = 1;
+        let dots = []; 
 
-        changeOpinion();
+        for (let i = 0; opinions.length > i; i++) {
+            const dot = document.createElement('li');
+
+            dot.setAttribute('data-slide-to', i + 1);
+            dot.classList.add('opinions__dot');
+            indicators.append(dot);
+            dots.push(dot);
             
+        }
+
+        changeOpinion(); 
+
         function changeOpinion (n = 0) {
-            opinions.forEach(opinion => opinion.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-
-
+           
             index += n;
-
 
             if(index > opinions.length) {
                 index = 1;
@@ -860,14 +881,64 @@
             else if(index < 1 ) {
                 index = opinions.length;
             }
-            opinions[index - 1].classList.add('active');
-            dots[index - 1].classList.add('active');
-
+            
+           activeClass(index - 1);
 
         }
+        
+        function activeClass(i) {
+            opinions.forEach(opinion => opinion.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
 
-        next.addEventListener('click', (e) => changeOpinion(1));
-        prev.addEventListener('click', (e) => changeOpinion(-1));
+            opinions[i].classList.add('active');
+            dots[i].classList.add('active');
+            
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', (e) => {
+                slideTo = e.target.getAttribute('data-slide-to')  - 1;
+                activeClass(slideTo);
+                index = slideTo + 1;
+            });
+        });
+      
+        next.addEventListener('click', () => changeOpinion(1));
+        prev.addEventListener('click', () => changeOpinion(-1));
+
+
+       
+        // MODAL
+
+        const modalBtns = document.querySelectorAll('.modal-btn'),
+            modalWindow = document.querySelector('.modal');
+            closeBtn = document.querySelector('[data-close]');
+
+        modalBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modalWindow.classList.add('active');
+                body.classList.add('of-hidden');
+
+            });
+        });
+
+        modalWindow.addEventListener('click', (e) => {
+            if (e.target === modalWindow || e.target == closeBtn) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Escape' && modalWindow.classList.contains('active')) {
+                closeModal(modalWindow);
+            }
+        });
+
+
+        function closeModal() {
+            modalWindow.classList.remove('active');
+            body.classList.remove('of-hidden');
+        }
 
     </script>
 

@@ -14,6 +14,7 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:regular,500,600&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:regular,500,600&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:regular,500,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:regular,500,600&display=swap");
 .red {
   color: #FF2D59;
 }
@@ -1403,6 +1404,101 @@
   }
   .footer__body a {
     font-size: 1.25rem;
+  }
+}
+
+.red {
+  color: #FF2D59;
+}
+
+.green {
+  color: #4ADB61;
+}
+
+.orange {
+  color: #FF6800;
+}
+
+.modal {
+  display: none !important;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 17, 59, 0.8);
+}
+.modal.active {
+  display: flex !important;
+}
+.modal__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  flex: 1 1 50%;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 25px 20px 20px;
+  max-width: 30%;
+  color: #00113B;
+  border-radius: 10px;
+  background-color: #FFCC00;
+}
+.modal__close {
+  align-self: flex-end;
+  font-size: 40px;
+  font-weight: 100;
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  cursor: pointer;
+}
+.modal__title {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 100%;
+  justify-content: center;
+}
+.modal__form input, .modal__form button {
+  height: 30px;
+  border-radius: 5px;
+}
+.modal__form input {
+  text-align: center;
+  font-size: 0.8rem;
+}
+.modal__form button {
+  background-color: #00113B;
+  color: #ffffff;
+  margin-top: 20px;
+}
+@media screen and (max-width: 900px) {
+  .modal__wrapper {
+    max-width: 50%;
+  }
+  .modal__title {
+    font-size: 1.3rem;
+  }
+  .modal__form input, .modal__form button {
+    height: 25px;
+    border-radius: 5px;
+  }
+  .modal__form input {
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 530px) {
+  .modal__wrapper {
+    max-width: 70%;
   }
 }
 

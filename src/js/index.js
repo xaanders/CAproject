@@ -54,3 +54,14 @@ function changeOpinion (n = 0) {
 
 next.addEventListener('click', (e) => changeOpinion(1));
 prev.addEventListener('click', (e) => changeOpinion(-1));
+
+
+
+const modalBtns = document.querySelectorAll('.modal-btn'),
+    modalWindow = document.querySelector('.modal');
+
+    modalBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            modalWindow.classList.toggle('active');
+        });
+    });
