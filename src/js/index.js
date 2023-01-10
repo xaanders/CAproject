@@ -65,3 +65,8 @@ const modalBtns = document.querySelectorAll('.modal-btn'),
             modalWindow.classList.toggle('active');
         });
     });
+
+
+
+
+    

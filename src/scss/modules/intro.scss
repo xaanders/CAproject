@@ -100,15 +100,21 @@
         }
     
         &__info {
+            order: 1;
 
             .info__title {
                 font-size: 2.8rem;
                 line-height: 1.3;
 
             }
+            .info__btn {
+                justify-self: center;
+            }
            
         }
-        
+        &__picture {
+            order: 0;
+        }
     }
 
 
@@ -116,7 +122,6 @@
 
     
         &__info {
-            order: 1;
             justify-content: center;
 
             .info__title {
@@ -131,9 +136,7 @@
          
         }
 
-        &__picture {
-            order: 0;
-        }
+       
     }
 }
 
